@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PDF Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      html, body, iframe {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe id="viewer" frameborder="0"></iframe>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const fileUrl = params.get('file');
+      document.getElementById('viewer').src = fileUrl;
+    </script>
+  </body>
+</html>
